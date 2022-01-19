@@ -13,8 +13,12 @@ const headerOptions = {
 export class AlquranService {
   private apiUrl = 'http://api.alquran.cloud/v1';
   constructor(private http: HttpClient) {}
-  getTasks(): Observable<Surah[]> {
+  getSurahs(): Observable<Surah[]> {
     const url = `${this.apiUrl}/surah`;
+    return this.http.get<Surah[]>(url);
+  }
+  getSurah(id: number): Observable<Surah[]> {
+    const url = `${this.apiUrl}/surah/${id}`;
     return this.http.get<Surah[]>(url);
   }
 }

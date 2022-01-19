@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlquranService } from '../../../services/alquran.service';
 import { Surah } from '../../../Surah';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -8,11 +9,12 @@ import { Surah } from '../../../Surah';
 })
 export class IndexComponent implements OnInit {
   constructor(private alquranService: AlquranService) {}
-  tasks: Surah[] = [];
+  surahs: Surah[] = [];
+  faTimes = faEye;
+
   ngOnInit(): void {
-    this.alquranService.getTasks().subscribe((res: any) => {
-      console.log(res);
-      this.tasks = res.data;
+    this.alquranService.getSurahs().subscribe((res: any) => {
+      this.surahs = res.data;
     });
   }
 }
