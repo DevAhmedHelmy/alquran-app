@@ -11,6 +11,7 @@ import { FooterComponent } from './components/layouts/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { BasicHighlightDirective } from './directives/basic.highlight.directive';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
+import { SearchComponent } from './components/alquran/search/search.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { BetterHighlightDirective } from './directives/better-highlight.directiv
     BasicHighlightDirective,
     BetterHighlightDirective,
     HomeComponent,
+    SearchComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

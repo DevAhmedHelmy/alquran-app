@@ -21,4 +21,5 @@ export class AlquranService {
     const url = `${this.apiUrl}/surah/${id}`;
     return this.http.get<Surah[]>(url);
   }
+  
 }
