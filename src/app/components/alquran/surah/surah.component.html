@@ -1,1 +1,14 @@
-{{ surah.name }}
+<div class="row">
+  <div class="col-12" *ngIf="surah">
+    <div>
+      <p>Surah Number : {{ surah.number }}</p>
+      <p>Surah name : {{ surah.name }}</p>
+      <p>Surah englishName : {{ surah.englishName }}</p>
+      <p>Surah numberOfAyahs : {{ surah.numberOfAyahs }}</p>
+      <p>Surah revelationType : {{ surah.revelationType }}</p>
+    </div>
+    <hr />
+    <p *ngFor="let ayah of surah.ayahs">{{ ayah.text }} {{ ayah.number }}</p>
+  </div>
+</div>
+  

@@ -9,6 +9,8 @@ import { SurahComponent } from './components/alquran/surah/surah.component';
 import { HeaderComponent } from './components/layouts/header/header.component';
 import { FooterComponent } from './components/layouts/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { BasicHighlightDirective } from './directives/basic.highlight.directive';
+import { BetterHighlightDirective } from './directives/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { HomeComponent } from './components/home/home.component';
     SurahComponent,
     HeaderComponent,
     FooterComponent,
-
+    BasicHighlightDirective,
+    BetterHighlightDirective,
     HomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
